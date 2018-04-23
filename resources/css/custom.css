@@ -1,0 +1,28 @@
+/* Any CSS added to this file will override the rules in app.min.css */
+
+.maintenance--inner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maintenance--logo {
+  width: 250px;
+}
+
+.social--icons {
+  display: flex;
+  width: 50px;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.social--icons > a {
+  color: white;
+}
+
+.social--icons > a:hover {
+  color: red;
+}
