@@ -39,6 +39,7 @@
 
     <header>
       {% if theme.stickyHeader %}
+      {{ theme.stickyHeader }}
       <div data-sticky-container>
         <div class="header-inner" data-sticky data-options="marginTop:0;" data-top-anchor="1">
           {{ partial('header') }}

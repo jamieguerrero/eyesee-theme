@@ -11,7 +11,7 @@ customFields:
     facebookLink: { type: text, title: 'Facebook Social Account Link', default: 'http://www.eyesee.space' }
     twitterLink: { type: text, title: 'Twitter Social Account Link', default: '' }
     instagramLink: { type: text, title: 'Instagram Social Account Link', default: 'https://www.instagram.com/_eyesee_/' }
-    # googleFontURL: { type: text, title: 'Google Font URL', default: 'https://fonts.googleapis.com/css?family=Lato' }
+    googleFontURL: { type: text, title: 'Google Font URL', default: 'https://fonts.googleapis.com/css?family=Lato' }
     stickyHeader: { type: checkbox, title: 'Keep header menu on the page as user scrolls', default: false }
     fillWindow: { type: checkbox, title: 'Keep footer at bottom of screen on short pages', default: true }
     enableReviews: { type: checkbox, title: 'Product Page - Show reviews', default: true }
@@ -20,7 +20,7 @@ customFields:
     enableCartUpsells: { type: checkbox, title: 'Cart Page - Show upsells', default: true }
     enableHomeBlogPreview: { type: checkbox, title: 'Home Page - Show latest blog posts', default: true }
     enableHomeHero: { type: checkbox, title: 'Home Page - Show hero image with home-hero-content widget block centered within it', default: true }
-    homeHeroImage: { type: image, title: 'Home Page - Hero Image', default: 'https://placehold.it/1200x400' }
+    homeHeroImage: { type: image, title: 'Home Page - Hero Image', default: '@images/dist/hero-image.jpg' }
     autoSubmitOnlyShippingMethod: { type: checkbox, title: 'Checkout Page - Auto-submit shipping option if there is only one option', default: true}
     categoryListImageEqualizeStrategy: { type: dropdown, title: 'Category List - Image Height Equalization Strategy', default: stretch, options: { stretch: 'Stretch', top: 'Align Top', middle: 'Align Middle', bottom: 'Align Bottom' } }
     productListImageEqualizeStrategy: { type: dropdown, title: 'Product List - Image Height Equalization Strategy', default: stretch, options: { stretch: 'Stretch', top: 'Align Top', middle: 'Align Middle', bottom: 'Align Bottom' } }

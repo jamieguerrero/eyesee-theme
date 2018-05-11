@@ -1,12 +1,24 @@
-.home {
-  .home-hero {
-    .orbit {
-      .orbit-caption {
-        bottom: 50%;
-        transform: translateY(50%);
-        text-align: center;
-        background-color: transparent;
-      }
-    }
-  }
+// .home {
+//   .home-hero {
+//     .orbit {
+//       .orbit-caption {
+//         bottom: 50%;
+//         transform: translateY(50%);
+//         text-align: center;
+//         background-color: transparent;
+//       }
+//     }
+//   }
+// }
+
+header {
+  height: 50vh;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -99;
 }
