@@ -29,21 +29,21 @@ published: true
   {% endif %}
 
   <main class="grid-container">
-  <section>
+  <!-- <section>
     <h2>Categories</h2>
       {{ partial('category-list', {categories: categories}) }}
-  </section>
+  </section> -->
 
   {% set featured_products = ('featured' | collection).products %}
   {% if featured_products | length %}
     <section class="callout">
-      <h2>Featured</h2>
+      <h4>Featured Products</h4>
       {{ partial('product-list', {products: featured_products}) }}
     </section>
   {% else %}
     {% if products | length %}
     <section class="callout">
-      <h2>Latest Products</h2>
+      <h4>Latest Products</h4>
       {{ partial('product-list',
         {products:
           products | extended_sort('created_at', true) | reverse | slice(0,6) })
@@ -52,7 +52,7 @@ published: true
     {% endif %}
   {% endif %}
 
-  {% set sale_products = [] %}
+  <!-- {% set sale_products = [] %}
   {% for product in products if product.onSale %}
     {% set sale_products = sale_products | merge([product])%}
   {% endfor %}
@@ -64,13 +64,7 @@ published: true
     {% else %}
       There are no products on sale right now.
     {% endif %}
-  </section>
-
-    {% if theme.enableHomeAbout %}
-    <section>
-      {{ content_block('home-about') }}
-    </section>
-  {% endif %}
+  </section> -->
 
   {% set blog_posts = cmsContent('blog')
     | extended_sort('published_on', false) %} {# false means descending #}
@@ -81,10 +75,5 @@ published: true
     </section>
   {% endif %}
   </main>
-  {% if theme.enableCustomContent %}
-    <section>
-      {{ content_block('home-custom') }}
-    </section>
-  {% endif %}
 
 </section>

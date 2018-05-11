@@ -1,0 +1,6 @@
+---
+url: /.well-known/acme-challenge/C5Ch_1Q664beRl7dJx6YQ8r55QhDv30pEHeKvGfhslE
+template: letsencrypt
+published: true
+protocol: all
+---

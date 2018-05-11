@@ -5,11 +5,13 @@ engine: twig
 customFields:
     storeTitle: { type: text, title: 'Store Name', default: 'This Shop' }
     storeLogo: { type: image, title: 'Store Logo', default: '@images/dist/eyesee-logo.svg' }
+    storePhonenumber: { type: text, title: 'Store Phone Number', default: '647 555 5555' }
+    storeEmail: { type: text, title: 'Store Email', default: 'info@eyeseeapparel.com' }
     footerLegalText: { type: text, title: 'Footer Legal Text', default: '© 2017 LemonStand eCommerce Inc.' }
     facebookLink: { type: text, title: 'Facebook Social Account Link', default: 'http://www.eyesee.space' }
     twitterLink: { type: text, title: 'Twitter Social Account Link', default: '' }
     instagramLink: { type: text, title: 'Instagram Social Account Link', default: 'https://www.instagram.com/_eyesee_/' }
-    googleFontURL: { type: text, title: 'Google Font URL', default: 'https://fonts.googleapis.com/css?family=Bungee|Quicksand' }
+    googleFontURL: { type: text, title: 'Google Font URL', default: 'https://fonts.googleapis.com/css?family=Lato' }
     stickyHeader: { type: checkbox, title: 'Keep header menu on the page as user scrolls', default: true }
     fillWindow: { type: checkbox, title: 'Keep footer at bottom of screen on short pages', default: true }
     enableReviews: { type: checkbox, title: 'Product Page - Show reviews', default: true }
@@ -17,7 +19,6 @@ customFields:
     enableCartCrossSells: { type: checkbox, title: 'Cart Page - Show cross-sells', default: true }
     enableCartUpsells: { type: checkbox, title: 'Cart Page - Show upsells', default: true }
     enableHomeBlogPreview: { type: checkbox, title: 'Home Page - Show latest blog posts', default: true }
-    enableHomeAbout: { type: checkbox, title: 'Home Page- Show widget block home-about', default: true }
     enableHomeHero: { type: checkbox, title: 'Home Page - Show hero image with home-hero-content widget block centered within it', default: true }
     homeHeroImage: { type: image, title: 'Home Page - Hero Image', default: 'https://placehold.it/1200x400' }
     autoSubmitOnlyShippingMethod: { type: checkbox, title: 'Checkout Page - Auto-submit shipping option if there is only one option', default: true}
