@@ -51,29 +51,28 @@
             <li class="show-for-large">
               <a href="/login#login">Log In</a>
             </li>
+            <div class="cell shrink medium-order-3 large-order-2 menu-cart">
+              <ul class="menu">
+                <li>
+                  <a class="button secondary" data-toggle="mini-cart-dropdown">
+                    <span class="fa fa-shopping-cart"></span>Cart <span class="badge light cart-count">{{ partial('cart-count') }}</span>
+                  </a>
+                  <div id="mini-cart-dropdown" class="dropdown-pane mini-cart" data-dropdown data-close-on-click="true">
+                    {{ partial('mini-cart') }}
+                  </div>
+                </li>
+              </ul>
+            </div>
             {% endif %}
           </ul>
 
         </nav>
 
-        <div class="cell shrink medium-order-3 large-order-2 menu-cart">
-          <ul class="menu">
-            <li>
-              <a class="button secondary" data-toggle="mini-cart-dropdown">
-                <span class="fa fa-shopping-cart"></span>Cart <span class="badge light cart-count">{{ partial('cart-count') }}</span>
-              </a>
-              <div id="mini-cart-dropdown" class="dropdown-pane mini-cart" data-dropdown data-close-on-click="true">
-                {{ partial('mini-cart') }}
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="cell medium-6 medium-order-1 menu-search">
+        <!-- <div class="cell medium-6 medium-order-1 menu-search">
           {{ open_form({ 'method': 'get', 'action': site_url('search') }) }}
           <input type="text" name="query" value="{{ query | unescape }}" placeholder="Search store&hellip;"/>
           {{ close_form() }}
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

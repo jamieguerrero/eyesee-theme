@@ -1,54 +1,35 @@
 .page-footer {
-  background: $light-gray;
+  background: $black;
+  color: $white;
   padding: 1rem 0;
 
-  .footer-custom-nav {
-    margin: 0 5rem 1rem 0;
-
-    > ul {
-      @include menu-base;
-      display: block;
-    }
+  a {
+    color: $white
   }
 
-  .footer-categories {
-    margin: 0 5rem 1rem 0;
-
-    > .menu {
-      display: block;
-    }
+  .footer-nav {
+    list-style-type: none;
   }
 
-  .footer-core {
+  .footer-logo {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    min-width: 20rem;
+    margin: 0px auto;
+    width: 125px;
   }
 
   @include breakpoint(medium down) {
-    .footer-custom-nav,
-    .footer-categories {
+    .footer-contact,
+    .footer-social,
+    .footer-nav {
       margin-right: 0;
     }
   }
 
   @include breakpoint(small down) {
-    .footer-custom-nav,
-    .footer-categories {
-      border-bottom: 1px solid $medium-gray;
-      padding-bottom: 1rem;
-    }
-
-    .footer-core {
-      align-items: center;
-
-      .menu {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
+    .footer-contact,
+    .footer-social,
+    .footer-nav {
+      text-align: center;
     }
   }
 }

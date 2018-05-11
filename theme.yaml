@@ -5,11 +5,13 @@ engine: twig
 customFields:
     storeTitle: { type: text, title: 'Store Name', default: 'This Shop' }
     storeLogo: { type: image, title: 'Store Logo', default: '@images/dist/eyesee-logo.svg' }
+    storePhonenumber: { type: text, title: 'Store Phone Number', default: '647 555 5555' }
+    storeEmail: { type: text, title: 'Store Email', default: 'info@eyeseeapparel.com' }
     footerLegalText: { type: text, title: 'Footer Legal Text', default: '© 2017 LemonStand eCommerce Inc.' }
     facebookLink: { type: text, title: 'Facebook Social Account Link', default: 'http://www.eyesee.space' }
     twitterLink: { type: text, title: 'Twitter Social Account Link', default: '' }
     instagramLink: { type: text, title: 'Instagram Social Account Link', default: 'https://www.instagram.com/_eyesee_/' }
-    googleFontURL: { type: text, title: 'Google Font URL', default: 'https://fonts.googleapis.com/css?family=Bungee|Quicksand' }
+    googleFontURL: { type: text, title: 'Google Font URL', default: 'https://fonts.googleapis.com/css?family=Lato' }
     stickyHeader: { type: checkbox, title: 'Keep header menu on the page as user scrolls', default: true }
     fillWindow: { type: checkbox, title: 'Keep footer at bottom of screen on short pages', default: true }
     enableReviews: { type: checkbox, title: 'Product Page - Show reviews', default: true }
