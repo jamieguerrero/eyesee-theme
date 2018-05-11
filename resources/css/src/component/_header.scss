@@ -6,6 +6,10 @@
 
   .nav-wrapper  {
     list-style-type: none;
+    margin: 0px;
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
 
     li {
       float: left;
@@ -14,7 +18,7 @@
       a {
         color: $white;
         font-size: 1.5rem;
-        font-weight: bold;
+        font-family: $header-font-family;
       }
 
       a:hover {
@@ -26,15 +30,19 @@
 
   .nav-right {
     list-style-type: none;
+    display: flex;
+    margin: 0;
 
     li {
       float: left;
       margin-left: 5px;
+      display: flex;
+      align-items: center;
 
       a {
         color: $white;
         font-size: 1rem;
-        font-weight: bold;
+        font-family: $header-font-family;
       }
     }
   }

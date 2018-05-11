@@ -36,19 +36,15 @@ published: true
 
   {% set featured_products = ('featured' | collection).products %}
   {% if featured_products | length %}
-    <section class="callout">
-      <h4>Featured Products</h4>
-      {{ partial('product-list', {products: featured_products}) }}
-    </section>
+    <h4>Featured Products</h4>
+    {{ partial('product-list', {products: featured_products}) }}
   {% else %}
     {% if products | length %}
-    <section class="callout">
       <h4>Latest Products</h4>
       {{ partial('product-list',
         {products:
           products | extended_sort('created_at', true) | reverse | slice(0,6) })
       }}
-    </section>
     {% endif %}
   {% endif %}
 

@@ -11,8 +11,8 @@ customFields:
     facebookLink: { type: text, title: 'Facebook Social Account Link', default: 'http://www.eyesee.space' }
     twitterLink: { type: text, title: 'Twitter Social Account Link', default: '' }
     instagramLink: { type: text, title: 'Instagram Social Account Link', default: 'https://www.instagram.com/_eyesee_/' }
-    googleFontURL: { type: text, title: 'Google Font URL', default: 'https://fonts.googleapis.com/css?family=Lato' }
-    stickyHeader: { type: checkbox, title: 'Keep header menu on the page as user scrolls', default: true }
+    # googleFontURL: { type: text, title: 'Google Font URL', default: 'https://fonts.googleapis.com/css?family=Lato' }
+    stickyHeader: { type: checkbox, title: 'Keep header menu on the page as user scrolls', default: false }
     fillWindow: { type: checkbox, title: 'Keep footer at bottom of screen on short pages', default: true }
     enableReviews: { type: checkbox, title: 'Product Page - Show reviews', default: true }
     enableRatings: { type: checkbox, title: 'Product Page - Show ratings', default: true }
