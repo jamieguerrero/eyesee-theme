@@ -1,13 +1,42 @@
 .header-wrapper {
   display: flex;
-  height: 48px;
+  height: 154px;
+  justify-content: space-between;
+  align-items: center;
 
   .nav-wrapper  {
     list-style-type: none;
-    width: 100%
+
+    li {
+      float: left;
+      margin-left: 5px;
+
+      a {
+        color: $white;
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      a:hover {
+        color: $red;
+      }
+    }
+
   }
-  .header-widget {
+
+  .nav-right {
     list-style-type: none;
+
+    li {
+      float: left;
+      margin-left: 5px;
+
+      a {
+        color: $white;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
   }
 }
 
