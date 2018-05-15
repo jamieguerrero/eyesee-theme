@@ -1,6 +1,9 @@
-.header-wrapper {
+.header-logo {
+  width: 125px;
+}
+
+.header-inner > .grid-container {
   display: flex;
-  height: 154px;
   justify-content: space-between;
   align-items: center;
 
@@ -48,13 +51,26 @@
   }
 }
 
-.header-logo {
-  width: 125px;
+.header-inner.is-stuck {
+  background-color: $black;
+  transition: background-color 600ms ease-out;
 }
 
-.header-menu {
-
+.header-inner.is-anchored > .grid-container {
+  height: 154px;
+  transition: height 600ms ease-out;
 }
+
+.header-inner.is-stuck > .grid-container {
+  height: 84px;
+  transition: height 600ms ease-out;
+}
+
+.sticky-container {
+  transition: height 600ms ease-out;
+}
+
+
 @include breakpoint(medium down) {
 }
 

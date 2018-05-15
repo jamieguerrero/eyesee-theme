@@ -1,20 +1,6 @@
-<div class="header-wrapper row grid-container">
+<div class="grid-container">
   <a href="/"><img class="header-logo" src="{{ theme.storeLogo.thumbnail('auto', 'auto') }}" alt="{{ theme.storeLogo.alt }}"/></a>
   <ul class="nav-wrapper show-for-large">
-    <!-- <li>
-      <ul class="menu dropdown show-for-large header-core-nav" data-dropdown-menu>
-        <li class="is-dropdown-submenu-parent">
-          <a href="/products">Shop</a>
-          <ul class="menu">
-            {% for category in categories %}
-            <li>
-              <a href="/category/{{ category.url_name }}">{{ category.name }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </li>
-      </ul>
-    </li> -->
     {{ widget_block('header-nav-menu') }}
   </ul>
 
@@ -46,7 +32,7 @@
         {% endif %}
       </ul>
     </li>
-    <li class="cell shrink medium-order-3 large-order-2 menu-cart">
+    <li>
       <ul>
         <li>
           <a data-toggle="mini-cart-dropdown">

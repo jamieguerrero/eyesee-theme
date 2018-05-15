@@ -1,9 +1,22 @@
 ---
 url: /about
-name: 'about'
+name: 'About'
 template: default
 published: true
 protocol: all
 ---
-{{ widget_block('about-description') }}
-{{ widget_block('about-work') }}
+<h4>About</h4>
+<div class="grid-x margin-top-medium grid-padding-x">
+  <div class="cell large-6">
+    <img src="{{ theme.aboutImage.thumbnail('auto', 'auto') }}" alt="">
+  </div>
+  <div class="cell large-6">
+    {{ widget_block('about-description') }}
+  </div>
+</div>
+<div class="grid-x margin-top-large margin-bottom-large">
+  <div class="cell large-12">
+    <h4>Work</h4>
+    {{ widget_block('about-work') }}
+  </div>
+</div>

@@ -1,5 +1,7 @@
 .cart-contents {
   text-align: left;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 
   > .grid-x {
     margin: 0;
@@ -36,14 +38,18 @@
   }
 
   .contents-header {
-    background: $light-gray;
+    background: $black;
     padding-top: .5rem;
     padding-bottom: .5rem;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 
   .contents-product {
     padding-top: 1rem;
     padding-bottom: 1rem;
+    padding-left: 0px;
+    padding-right: 0px;
 
     h2 {
       small {

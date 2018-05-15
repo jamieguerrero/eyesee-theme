@@ -39,9 +39,8 @@
 
     <header>
       {% if theme.stickyHeader %}
-      {{ theme.stickyHeader }}
       <div data-sticky-container>
-        <div class="header-inner" data-sticky data-options="marginTop:0;" data-top-anchor="1">
+        <div class="header-inner grid-container" data-sticky data-options="marginTop:0;" data-top-anchor="1">
           {{ partial('header') }}
         </div>
       </div>
@@ -53,7 +52,9 @@
     </header>
 
     <main>
-      {{ page() }}
+      <div class="grid-container">
+        {{ page() }}
+      </div>
     </main>
 
     <footer class="page-footer">

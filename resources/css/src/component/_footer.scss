@@ -7,8 +7,14 @@
     color: $white
   }
 
-  .footer-nav {
+  .footer-nav-wrapper {
     list-style-type: none;
+    text-align: center;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    justify-content: space-around;
   }
 
   .footer-logo {
@@ -40,6 +46,7 @@
     .footer-social,
     .footer-nav {
       margin-right: 0;
+      height: 14rem;
     }
   }
 
@@ -48,6 +55,7 @@
     .footer-social,
     .footer-nav {
       text-align: center;
+      height: 10rem;
     }
   }
 }

@@ -1,6 +1,6 @@
 ---
 url: /
-name: Home
+name: Eyesee Apparel
 description: The home page. Introduces the store and lists some products.
 action: shop:products
 template: default
@@ -9,36 +9,22 @@ published: true
 <section class="home">
 
   {% if theme.enableHomeHero %}
-    <header class="grid-container">
-      <!-- <div class="orbit" role="region" data-orbit>
-        <div class="orbit-wrapper">
-          <ul class="orbit-container">
-            <li class="is-active orbit-slide">
-              <figure class="orbit-figure">
-
-                <figcaption class="orbit-caption">
-
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-        </div>
-      </div> -->
+    <header class="home-header hide-for-small-only">
       {{ content_block('home-hero-content') }}
-  </header>
-  <img class="hero-image" src="{{ theme.homeHeroImage.thumbnail('auto', 'auto') }}"
-       alt="{{ theme.homeHeroImage.alt }}" title="{{ theme.homeHeroImage.title }}">
+    </header>
+    <img class="hero-image hide-for-small-only" src="{{ theme.homeHeroImage.thumbnail('auto', 'auto') }}"
+         alt="{{ theme.homeHeroImage.alt }}" title="{{ theme.homeHeroImage.title }}">
   {% endif %}
 
-  <main class="grid-container">
+  <main>
   <!-- <section>
     <h2>Categories</h2>
-      {{ partial('category-list', {categories: categories}) }}
+      {{ partial('category-list', {categories: categories}) }}s
   </section> -->
 
   {% set featured_products = ('featured' | collection).products %}
   {% if featured_products | length %}
-    <h4>Featured Products</h4>
+    {{ widget_block('home-featured') }}
     {{ partial('product-list', {products: featured_products}) }}
   {% else %}
     {% if products | length %}
@@ -73,5 +59,7 @@ published: true
     </section>
   {% endif %}
   </main>
+
+  {{ widget_block('home-call-to-action') }}
 
 </section>
