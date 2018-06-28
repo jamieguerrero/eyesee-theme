@@ -1,54 +1,77 @@
 .page-footer {
-  background: $light-gray;
-  padding: 1rem 0;
+  background: $black;
+  color: $white;
+  padding: 4rem 0;
 
-  .footer-custom-nav {
-    margin: 0 5rem 1rem 0;
-
-    > ul {
-      @include menu-base;
-      display: block;
-    }
+  a {
+    color: $white;
+    font-weight: 600;
   }
 
-  .footer-categories {
-    margin: 0 5rem 1rem 0;
-
-    > .menu {
-      display: block;
-    }
-  }
-
-  .footer-core {
+  .footer-nav-wrapper {
+    list-style-type: none;
+    text-align: center;
+    margin: 0px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
-    min-width: 20rem;
+    height: 10rem;
+    justify-content: space-around;
+  }
+
+  .footer-logo {
+    display: flex;
+    margin: 0px auto;
+    margin-top: 4rem;
+    width: 125px;
+  }
+
+  .footer-contact,
+  .footer-social,
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20rem;
+
+    .footer-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .contact-inner {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-inner > p {
+        display: inline-flex;
+      }
+
+      img.contact-social {
+          padding-right: 1rem;
+      }
+    }
   }
 
   @include breakpoint(medium down) {
-    .footer-custom-nav,
-    .footer-categories {
+    .footer-contact,
+    .footer-social,
+    .footer-nav {
       margin-right: 0;
+      height: 14rem;
+      margin-bottom: 8rem;
     }
   }
 
   @include breakpoint(small down) {
-    .footer-custom-nav,
-    .footer-categories {
-      border-bottom: 1px solid $medium-gray;
-      padding-bottom: 1rem;
-    }
+    .footer-contact,
+    .footer-social,
+    .footer-nav {
+      text-align: center;
+      height: 10rem;
 
-    .footer-core {
-      align-items: center;
-
-      .menu {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
     }
   }
 }

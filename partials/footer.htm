@@ -1,65 +1,54 @@
 <div class="grid-container">
   <div class="grid-x grid-padding-x">
 
-    <div class="cell small-12 medium-shrink footer-custom-nav">
-      {{ widget_block('footer-nav-menu') }}
+    <div class="cell small-12 medium-12 large-auto footer-contact">
+      <h4>CONTACT</h4>
+      <div class="footer-wrapper">
+        <div class="contact-inner">
+          <p>
+            <img class="contact-social" src="{{ theme.contactPhoneImage.thumbnail('auto', 'auto') }}" alt="">
+            {{ theme.storePhonenumber }}
+          <p>
+          <p>
+            <img class="contact-social" src="{{ theme.contactEmailImage.thumbnail('auto', 'auto') }}" alt="">
+            {{ theme.storeEmail }}
+          <p>
+        </div>
+      </div>
     </div>
 
-    <div class="cell small-12 medium-shrink footer-categories">
+    <div class="cell small-12 medium-12 large-auto footer-social">
+      <h4>SOCIAL</h4>
 
-      <ul class="menu">
-        {% for category in categories[:10] %}
-        <li>
-          <a href="/category/{{ category.url_name }}">{{ category.name }}</a>
-        </li>
-        {% endfor %}
-      </ul>
+      <div class="footer-wrapper">
+        <ul class="menu footer-social-links">
+          {% if theme.facebookLink %}
+          <li>
+            <a href="{{ theme.facebookLink }}" target="_blank"><img src="{{ theme.socialFacebook.thumbnail('auto', 'auto') }}" alt=""></a>
+          </li>
+          {% endif %}
+          {% if theme.twitterLink %}
+          <li>
+            <a href="{{ theme.twitterLink }}" target="_blank"><img src="{{ theme.socialTwitter.thumbnail('auto', 'auto') }}" alt=""></a>
+          </li>
+          {% endif %}
+          {% if theme.instagramLink %}
+          <li>
+            <a href="{{ theme.instagramLink }}" target="_blank"><img src="{{ theme.socialInstagram.thumbnail('auto', 'auto') }}" alt=""></a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
 
     </div>
 
-
-    <div class="cell small-12 medium-auto footer-core">
-
-      <p>{{ theme.footerLegalText }}</p>
-
-      <ul class="menu footer-social-links">
-        {% if theme.facebookLink %}
-        <li>
-          <a href="{{ theme.facebookLink }}" target="_blank"><span class="fa fa-2x fa-facebook-official"></span></a>
-        </li>
-        {% endif %}
-        {% if theme.twitterLink %}
-        <li>
-          <a href="{{ theme.twitterLink }}" target="_blank"><span class="fa fa-2x fa-twitter"></span></a>
-        </li>
-        {% endif %}
-        {% if theme.instagramLink %}
-        <li>
-          <a href="{{ theme.instagramLink }}" target="_blank"><span class="fa fa-2x fa-instagram"></span></a>
-        </li>
-        {% endif %}
-      </ul>
-
-      <ul class="menu">
-        {% if customer %}
-        <li>
-          <a href="/logout">Log Out</a>
-        </li>
-        <li>
-          <a href="/account">My Account</a>
-        </li>
-        {% else %}
-        <li>
-          <a href="/login#login">Log In</a>
-        </li>
-        <li>
-          <a href="/login#register">Register</a>
-        </li>
-        {% endif %}
-      </ul>
-
+    <div class="cell small-12 medium-12 large-auto footer-nav">
+      <h4>NAV</h4>
+      <div class="footer-wrapper">
+        {{ widget_block('footer-nav-menu') }}
+      </div>
     </div>
 
   </div>
-
+  <a href="/"><img class="footer-logo" src="{{ theme.storeLogo.thumbnail('auto', 'auto') }}" alt="{{ theme.storeLogo.alt }}"/></a>
 </div>

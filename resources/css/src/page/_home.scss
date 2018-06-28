@@ -1,12 +1,61 @@
-.home {
-  .home-hero {
-    .orbit {
-      .orbit-caption {
-        bottom: 50%;
-        transform: translateY(50%);
-        text-align: center;
-        background-color: transparent;
-      }
-    }
+.testbackground {
+    height: 100%;
+    background-image: url('/resources/eyesee-theme/images/dist/hero-image.jpg');
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1000;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header.home-header {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  a.call-to-action {
+    color: $white;
+  }
+}
+
+.hero-image-large {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    height: 100%;
+    width: 100%;
+    background-position-x: right;
+    background-size: cover;
+}
+
+
+.home-featured {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-call-to-action {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.call-to-action-inner {
+    position: absolute;
+}
+
+@include breakpoint(medium down) {
+  .hero-image-large {
+      display: none;
+  }
+
+  .hero-image-medium {
+    
   }
 }

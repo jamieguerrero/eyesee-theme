@@ -12,12 +12,25 @@
   {% endif %}
 </header>
 
-<main class="media-object">
+<main class="grid-x">
 
-  <section class="product-image media-object-section">
-    <div class="orbit" data-orbit>
+  <section class="cell large-auto">
+    <div class="orbit grid-x" data-orbit>
+      <nav class="orbit-bullets cell large-3">
+        {% for index, image in product.images %}
+        <button
+            {% if loop.first %}class="is-active"{% endif %}
+            data-slide="{{ index }}">
+          <img
+              class="orbit-image"
+                src="{{ image.thumbnail(100, 'auto') }}"
+              alt="{{ image.description }}"
+              title="{{ image.title }}" />
+        </button>
+        {% endfor %}
+      </nav>
 
-      <ul class="orbit-container">
+      <ul class="orbit-container cell large-9">
         {% if not product.images.count %}
           <li class="orbit-slide is-active">
             <img
@@ -39,24 +52,12 @@
         {% endif %}
       </ul>
 
-      <nav class="orbit-bullets">
-        {% for index, image in product.images %}
-        <button
-            {% if loop.first %}class="is-active"{% endif %}
-            data-slide="{{ index }}">
-          <img
-              class="orbit-image"
-                src="{{ image.thumbnail(100, 'auto') }}"
-              alt="{{ image.description }}"
-              title="{{ image.title }}" />
-        </button>
-        {% endfor %}
-      </nav>
+
 
     </div>
   </section>
 
-  <section class="media-object-section main-section">
+  <section class="cell large-auto">
 
     <h2>
       {{ product.name }}
@@ -91,7 +92,7 @@
       {{ product.description | unescape }}
     </section>
 
-    {% if product.productAttributes.count or product.height or product.width
+    <!-- {% if product.productAttributes.count or product.height or product.width
         or product.depth or product.weight or product.sku %}
     <table class="product-attributes">
       {% for attribute in product.productAttributes %}
@@ -136,7 +137,7 @@
           </tr>
         {% endif %}
     </table>
-    {% endif %}
+    {% endif %} -->
 
     <section class="product-form">
       {{ open_form({
@@ -224,7 +225,7 @@
     </section>
 
   </section>
-  </main>
+</main>
 
 <main class="bottom-content">
 

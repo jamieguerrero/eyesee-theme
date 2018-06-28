@@ -10,6 +10,13 @@
     }
   }
 
+  @include breakpoint(large up) {
+    .cart-summary {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }
+
   .cart-summary {
 
     .cart-shipping-estimates {
@@ -67,4 +74,3 @@
     }
   }
 }
-

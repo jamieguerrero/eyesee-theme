@@ -15,6 +15,10 @@
       .product-name {
         padding-bottom: 0;
       }
+
+      .product-summary {
+        float: left;
+      }
     }
   }
 
@@ -27,13 +31,14 @@
     padding-bottom: 1rem;
 
     .cart-subtotal {
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
   }
 
   .cta-cell {
     .button {
       justify-content: center;
+      color: $black !important;
     }
   }
 

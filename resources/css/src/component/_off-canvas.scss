@@ -1,4 +1,6 @@
 .off-canvas {
+  background: $black;
+
   .off-canvas-logo {
     @include xy-gutters($gutters: $grid-margin-gutters, $gutter-type: margin);
     height: rem-calc(30);
@@ -6,12 +8,17 @@
     margin-bottom: 1rem;
   }
 
+  .close-button {
+    color: $white;
+  }
+
   .off-canvas-core-nav,
   .off-canvas-account-nav {
     li {
       a {
         padding: 1rem;
-        border-top: 1px solid $medium-gray;
+        color: $white;
+        padding: 1rem;
 
         &.button {
           font-size: inherit;
@@ -20,14 +27,11 @@
 
       ul {
         a {
-          border-top: 1px dashed $medium-gray;
+          color: $white;
+          padding: 1rem;
         }
       }
     }
-  }
-
-  .off-canvas-account-nav {
-    border-bottom: 1px solid $medium-gray;
   }
 
   .off-canvas-custom-nav {
@@ -37,8 +41,8 @@
 
       li {
         a {
+          color: $white;
           padding: 1rem;
-          border-top: 1px solid $medium-gray;
         }
       }
     }

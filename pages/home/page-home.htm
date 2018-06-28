@@ -1,90 +1,69 @@
 ---
 url: /
-name: Home
+name: Eyesee Apparel
 description: The home page. Introduces the store and lists some products.
 action: shop:products
 template: default
 published: true
 ---
+<div class="hero-image-large" style="background-image:url({{ theme.homeHeroImage.thumbnail('auto', 'auto') }})"></div>
+<div class="hero-image-medium" style="background-image:url({{ theme.homeHeroImage.thumbnail('auto', 'auto') }})"></div>
+<div class="hero-image-small" style="background-image:url({{ theme.homeHeroImage.thumbnail('auto', 'auto') }})"></div>
 <section class="home">
 
   {% if theme.enableHomeHero %}
-    <header class="home-hero">
-      <div class="orbit" role="region" data-orbit>
-        <div class="orbit-wrapper">
-          <ul class="orbit-container">
-            <li class="is-active orbit-slide">
-              <figure class="orbit-figure">
-                <img class="orbit-image" src="{{ theme.homeHeroImage.thumbnail('auto', 'auto') }}"
-                     alt="{{ theme.homeHeroImage.alt }}" title="{{ theme.homeHeroImage.title }}">
-                <figcaption class="orbit-caption">
-                  {{ content_block('home-hero-content') }}
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-        </div>
-      </div>
-  </header>
+    <header class="home-header hide-for-small-only">
+      {{ content_block('home-hero-content') }}
+    </header>
+
   {% endif %}
 
-  <main class="grid-container">
-  <section>
-    <h2>Categories</h2>
-      {{ partial('category-list', {categories: categories}) }}
-  </section>
+  <main>
+    <!-- <section>
+      <h2>Categories</h2>
+        {{ partial('category-list', {categories: categories}) }}s
+    </section> -->
 
-  {% set featured_products = ('featured' | collection).products %}
-  {% if featured_products | length %}
-    <section class="callout">
-      <h2>Featured</h2>
+    {% set featured_products = ('featured' | collection).products %}
+    {% if featured_products | length %}
+      {{ widget_block('home-featured') }}
       {{ partial('product-list', {products: featured_products}) }}
-    </section>
-  {% else %}
-    {% if products | length %}
-    <section class="callout">
-      <h2>Latest Products</h2>
-      {{ partial('product-list',
-        {products:
-          products | extended_sort('created_at', true) | reverse | slice(0,6) })
-      }}
-    </section>
-    {% endif %}
-  {% endif %}
-
-  {% set sale_products = [] %}
-  {% for product in products if product.onSale %}
-    {% set sale_products = sale_products | merge([product])%}
-  {% endfor %}
-
-  <section class="callout primary">
-    <h2>On Sale</h2>
-    {% if sale_products | length %}
-      {{ partial('product-list', {products: sale_products}) }}
     {% else %}
-      There are no products on sale right now.
+      {% if products | length %}
+        <h4>Latest Products</h4>
+        {{ partial('product-list',
+          {products:
+            products | extended_sort('created_at', true) | reverse | slice(0,6) })
+        }}
+      {% endif %}
     {% endif %}
-  </section>
 
-    {% if theme.enableHomeAbout %}
-    <section>
-      {{ content_block('home-about') }}
-    </section>
-  {% endif %}
+    <!-- {% set sale_products = [] %}
+    {% for product in products if product.onSale %}
+      {% set sale_products = sale_products | merge([product])%}
+    {% endfor %} -->
 
-  {% set blog_posts = cmsContent('blog')
-    | extended_sort('published_on', false) %} {# false means descending #}
-    {% if blog_posts | length and theme.enableHomeBlogPreview %}
-    <section>
-      <h1>Archive</h1>
-        {{ partial('archive-list', {posts: blog_posts | slice(0, 3)}) }}
-    </section>
-  {% endif %}
+    <!-- <section class="callout primary">
+      <h2>On Sale</h2>
+      {% if sale_products | length %}
+        {{ partial('product-list', {products: sale_products}) }}
+      {% else %}
+        There are no products on sale right now.
+      {% endif %}
+    </section> -->
+
+    {% set blog_posts = cmsContent('blog')
+      | extended_sort('published_on', false) %} {# false means descending #}
+      {% if blog_posts | length and theme.enableHomeBlogPreview %}
+      <section>
+        <h1>Archive</h1>
+          {{ partial('archive-list', {posts: blog_posts | slice(0, 3)}) }}
+      </section>
+    {% endif %}
+
+    {{ widget_block('home-call-to-action') }}
   </main>
-  {% if theme.enableCustomContent %}
-    <section>
-      {{ content_block('home-custom') }}
-    </section>
-  {% endif %}
+
+
 
 </section>

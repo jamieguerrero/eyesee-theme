@@ -1,3 +1,9 @@
+.product-name {
+  font-family: AvenirNextBold;
+  font-size: 1rem;
+  height: 1.5rem !important;
+}
+
 .product-prices {
   display: flex;
   flex-direction: column;
@@ -17,7 +23,6 @@
 
   .product-price {
     margin: 0;
-    font-size: 1.25rem;
-    font-weight: bold;
+    font-size: 1rem;
   }
 }

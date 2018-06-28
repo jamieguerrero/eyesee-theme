@@ -62,10 +62,48 @@
 
 @import 'util/util';
 
+//Fonts
+
+@font-face {
+    font-family: 'AvenirNextBold';
+    src: url('../../fonts/avenir-next-bold.eot');
+    src: url('../../fonts/avenir-next-bold.eot') format('embedded-opentype'),
+         url('../../fonts/avenir-next-bold.woff') format('woff'),
+         url('../../fonts/avenir-next-bold.ttf') format('truetype'),
+         url('../../fonts/avenir-next-bold.svg#AvenirNextLTW01BoldRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirNextItalic';
+    src: url('../../fonts/avenir-next-italic.eot');
+    src: url('../../fonts/avenir-next-italic.eot') format('embedded-opentype'),
+         url('../../fonts/avenir-next-italic.woff') format('woff'),
+         url('../../fonts/avenir-next-italic.ttf') format('truetype'),
+         url('../../fonts/avenir-next-italic.svg#AvenirNextLTW01ItalicRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirNextRegular';
+    src: url('../../fonts/avenir-next-regular.eot');
+    src: url('../../fonts/avenir-next-regular.eot') format('embedded-opentype'),
+         url('../../fonts/avenir-next-regular.woff') format('woff'),
+         url('../../fonts/avenir-next-regular.ttf') format('truetype'),
+         url('../../fonts/avenir-next-regular.svg#AvenirNextLTW01RegularRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirNextThin';
+    src: url('../../fonts/avenir-next-thin.eot');
+    src: url('../../fonts/avenir-next-thin.eot') format('embedded-opentype'),
+         url('../../fonts/avenir-next-thin.woff') format('woff'),
+         url('../../fonts/avenir-next-thin.ttf') format('truetype'),
+         url('../../fonts/avenir-next-thin.svg#AvenirNextW01ThinRegular') format('svg');
+}
+
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
+$global-font-size: 14px;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $light-gray: #e6e6e6;
@@ -73,8 +111,9 @@ $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
+$red: #bd0000;
 $foundation-palette: (
-  primary: #1779ba,
+  primary: #bd0000,
   secondary: #767676,
   success: #3adb76,
   warning: #ffae00,
@@ -83,7 +122,7 @@ $foundation-palette: (
 );
 $body-background: $black;
 $body-font-color: $white;
-$body-font-family: 'Quicksand', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'AvenirNextRegular', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -107,8 +146,10 @@ $print-transparent-backgrounds: true;
 
 $breakpoints: (
   small: 0, // iPhone 5, and most other mobile phones
-  medium: 768px, // iPad, and most other tablets
-  large: 1024px, // Desktop (and iPad Pro)
+  medium: 480px, // iPad, and most other tablets
+  large: 768px, // Desktop (and iPad Pro)
+  x-large: 1024px,
+  HD: 1440px
 );
 $print-breakpoint: large;
 $breakpoint-classes: (small medium large);
@@ -121,6 +162,7 @@ $grid-column-count: 12;
 $grid-column-gutter: (
   small: 20px,
   medium: 30px,
+  large: 50px,
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';
@@ -129,8 +171,8 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: Quicksand, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$header-font-weight: bold;
+$header-font-family: 'AvenirNextBold', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$header-font-weight: 100;
 $header-font-style: normal;
 
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -157,7 +199,7 @@ $header-styles: (
   ),
 );
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 80%;
+$small-font-size: 85%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
@@ -223,16 +265,16 @@ $input-error-font-weight: $global-weight-bold;
 // 7. Accordion
 // ------------
 
-$accordion-background: $white;
+$accordion-background: $black;
 $accordion-plusminus: true;
-$accordion-title-font-size: rem-calc(12);
-$accordion-item-color: $primary-color;
-$accordion-item-background-hover: $light-gray;
-$accordion-item-padding: 1.25rem 1rem;
-$accordion-content-background: $white;
-$accordion-content-border: 1px solid $light-gray;
+$accordion-title-font-size: rem-calc(14);
+$accordion-item-color: $body-font-color;
+$accordion-item-background-hover: $black;
+$accordion-item-padding: 1.25rem 0rem;
+$accordion-content-background: $black;
+$accordion-content-border: 1px solid $black;
 $accordion-content-color: $body-font-color;
-$accordion-content-padding: 1rem;
+$accordion-content-padding: 1rem 0rem;
 
 // 8. Accordion Menu
 // -----------------
@@ -284,9 +326,9 @@ $button-font-weight: bold;
 $button-padding: .85em 1em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
-$button-background: $primary-color;
+$button-background: $white;
 $button-background-hover: scale-color($button-background, $lightness: -25%);
-$button-color: $white;
+$button-color: $black;
 $button-color-alt: $black;
 $button-radius: $global-radius;
 $button-hollow-border-width: 1px;
@@ -314,9 +356,8 @@ $buttongroup-radius-on-each: true;
 // 13. Callout
 // -----------
 
-$callout-background: $white;
-$callout-background-fade: 85%;
-$callout-border: 1px solid rgba($black, .25);
+$callout-background: $black;
+$callout-background-fade: 0%;
 $callout-margin: 0 0 1rem 0;
 $callout-padding: 1rem;
 $callout-font-color: $body-font-color;
@@ -327,13 +368,13 @@ $callout-link-tint: 30%;
 // 14. Card
 // --------
 
-$card-background: $white;
+$card-background: $black;
 $card-font-color: $body-font-color;
 $card-divider-background: $light-gray;
-$card-border: 1px solid $light-gray;
+$card-border: 0 solid $light-gray;
 $card-shadow: none;
 $card-border-radius: $global-radius;
-$card-padding: $global-padding;
+$card-padding: $global-padding 0rem;
 $card-margin-bottom: $global-margin;
 
 // 15. Close Button
@@ -392,12 +433,12 @@ $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
 $dropdownmenu-min-width: 200px;
-$dropdownmenu-background: $white;
+$dropdownmenu-background: $black;
 $dropdownmenu-submenu-background: $dropdownmenu-background;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
-$dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-border: 1px solid $white;
 $dropdown-menu-item-color-active: get-color(primary);
 $dropdown-menu-item-background-active: transparent;
 
@@ -422,7 +463,7 @@ $input-prefix-color: $black;
 $input-prefix-background: $light-gray;
 $input-prefix-border: 1px solid $medium-gray;
 $input-prefix-padding: 1rem;
-$form-label-color: $black;
+$form-label-color: $white;
 $form-label-font-size: rem-calc(14);
 $form-label-font-weight: $global-weight-normal;
 $form-label-line-height: 1.8;
@@ -771,9 +812,9 @@ $switch-paddle-transition: all .25s ease-out;
 // 50. Table
 // ---------
 
-$table-background: $white;
+$table-background: $black;
 $table-color-scale: 5%;
-$table-border: 1px solid smart-scale($table-background, $table-color-scale);
+$table-border: none;
 $table-padding: rem-calc(8 10 10);
 $table-hover-scale: 2%;
 $table-row-hover: darken($table-background, $table-hover-scale);
@@ -794,16 +835,16 @@ $table-stack-breakpoint: medium;
 // --------
 
 $tab-margin: 0;
-$tab-background: $white;
+$tab-background: $black;
 $tab-color: $primary-color;
-$tab-background-active: $light-gray;
+$tab-background-active: $black;
 $tab-active-color: $primary-color;
 $tab-item-font-size: 1rem;
 $tab-item-background-hover: $white;
 $tab-item-padding: 1.25rem 1.5rem;
 $tab-expand-max: 6;
-$tab-content-background: $white;
-$tab-content-border: $light-gray;
+$tab-content-background: $black;
+$tab-content-border: $black;
 $tab-content-color: $body-font-color;
 $tab-content-padding: 1rem;
 

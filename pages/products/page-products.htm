@@ -6,14 +6,14 @@ action: shop:products
 template: default
 published: true
 ---
-<section class="products grid-container">
+<section class="products">
 
   <div class="grid-x grid-padding-x">
-    <header class="cell">
-      <h1>Shop</h1>
+    <header>
+      <h4>Shop</h4>
     </header>
 
-    <main class="cell">
+    <main class="margin-top-medium">
       {{ partial('product-list', { products: products, showSort: true }) }}
     </main>
   </div>

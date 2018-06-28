@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50 (54983) - http://www.bohemiancoding.com/sketch -->
+    <title>Facebook</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1440w14f14x3g" transform="translate(-620.000000, -3044.000000)" fill="#FFFFFF">
+            <g id="Footer" transform="translate(0.000000, 2893.000000)">
+                <g id="Social" transform="translate(487.000000, 28.000000)">
+                    <g id="Social-Icons" transform="translate(133.000000, 123.000000)">
+                        <path d="M37.97,0 C17,0 0,17 0,37.97 C0,58.93 17,75.93 37.97,75.93 C58.93,75.93 75.93,58.93 75.93,37.97 C75.93,17 58.93,0 37.97,0 L37.97,0 Z M56.44,54.02 C56.44,55.14 55.89,56.331 54.78,56.331 L45.44,56.331 L45.44,42.331 L50.19,42.331 L50.91,36.331 L45.44,36.331 L45.44,32.75 C45.44,31.15 45.87,30.331 48.17,30.331 L51.44,30.331 L51.44,25.1 C50.44,25.03 48.89,24.88 46.86,24.88 C42.64,24.88 39.44,27.46 39.44,32.2 L39.44,36.331 L34.44,36.331 L34.44,42.331 L39.44,42.331 L39.44,56.331 L22.12,56.331 C21,56.331 20.44,55.14 20.44,54.02 L20.44,21.36 C20.44,20.24 21,19.331 22.12,19.331 L54.78,19.331 C55.89,19.331 56.44,20.24 56.44,21.36 L56.44,54.02 L56.44,54.02 Z" id="Facebook"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

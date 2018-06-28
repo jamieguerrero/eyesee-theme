@@ -52,10 +52,9 @@ description: Displays a product list.
         <a href="/product/{{ product.url_name }}">
           <div class="card">
 
-            <section class="card-image"
-                 data-equalizer-ignore-class="flex-container align-{{ theme.productListImageEqualizeStrategy }}"
-                 data-equalizer-watch="product-images">
+            <section class="card-image">
               <img
+                  class="thumbnail"
                   src="{{ product.images.first.thumbnail(400, 'auto')
                 | default('https://placehold.it/400x400') }}"
                   alt="{{ product.images.first.description }}"
@@ -64,7 +63,7 @@ description: Displays a product list.
 
             <section class="card-section">
               <div class="grid-x">
-                <div class="cell" data-equalizer-watch="product-name">{{ product.name }}</div>
+                <div class="cell product-name" data-equalizer-watch="product-name">{{ product.name }}</div>
                 <div class="product-prices cell">
                   {% if product.onSale %}
                     <span class="product-base-price">

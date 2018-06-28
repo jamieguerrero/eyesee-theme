@@ -5,21 +5,28 @@ engine: twig
 customFields:
     storeTitle: { type: text, title: 'Store Name', default: 'This Shop' }
     storeLogo: { type: image, title: 'Store Logo', default: '@images/dist/eyesee-logo.svg' }
+    storePhonenumber: { type: text, title: 'Store Phone Number', default: '647 555 5555' }
+    storeEmail: { type: text, title: 'Store Email', default: 'info@eyeseeapparel.com' }
     footerLegalText: { type: text, title: 'Footer Legal Text', default: '© 2017 LemonStand eCommerce Inc.' }
-    facebookLink: { type: text, title: 'Facebook Social Account Link', default: 'http://www.eyesee.space' }
+    facebookLink: { type: text, title: 'Facebook Social Account Link', default: '' }
     twitterLink: { type: text, title: 'Twitter Social Account Link', default: '' }
     instagramLink: { type: text, title: 'Instagram Social Account Link', default: 'https://www.instagram.com/_eyesee_/' }
-    googleFontURL: { type: text, title: 'Google Font URL', default: 'https://fonts.googleapis.com/css?family=Bungee|Quicksand' }
-    stickyHeader: { type: checkbox, title: 'Keep header menu on the page as user scrolls', default: true }
+    googleFontURL: { type: text, title: 'Google Font URL', default: 'https://fonts.googleapis.com/css?family=Lato' }
+    stickyHeader: { type: checkbox, title: 'Keep header menu on the page as user scrolls', default: false }
     fillWindow: { type: checkbox, title: 'Keep footer at bottom of screen on short pages', default: true }
     enableReviews: { type: checkbox, title: 'Product Page - Show reviews', default: true }
     enableRatings: { type: checkbox, title: 'Product Page - Show ratings', default: true }
     enableCartCrossSells: { type: checkbox, title: 'Cart Page - Show cross-sells', default: true }
     enableCartUpsells: { type: checkbox, title: 'Cart Page - Show upsells', default: true }
     enableHomeBlogPreview: { type: checkbox, title: 'Home Page - Show latest blog posts', default: true }
-    enableHomeAbout: { type: checkbox, title: 'Home Page- Show widget block home-about', default: true }
     enableHomeHero: { type: checkbox, title: 'Home Page - Show hero image with home-hero-content widget block centered within it', default: true }
-    homeHeroImage: { type: image, title: 'Home Page - Hero Image', default: 'https://placehold.it/1200x400' }
+    homeHeroImage: { type: image, title: 'Home Page - Hero Image', default: '@images/dist/hero-image.jpg' }
+    homeActionImage: { type: image, title: 'Home Page - Call to Action Image', default: '@images/dist/call-to-action.jpg' }
+    aboutImage: { type: image, title: 'About Page - stephen picture', default: '@images/dist/stephen.jpg' }
+    socialFacebook: { type: image, title: 'Facebook Social Icon', default: '@images/dist/social-facebook.svg' }
+    socialInstagram: { type: image, title: 'Instagram Social Icon', default: '@images/dist/social-instagram.svg' }
+    contactPhoneImage: { type: image, title: 'Footer - phone icon', default: '@images/dist/phone.svg' }
+    contactEmailImage: { type: image, title: 'Footer - email icon', default: '@images/dist/email.svg' }
     autoSubmitOnlyShippingMethod: { type: checkbox, title: 'Checkout Page - Auto-submit shipping option if there is only one option', default: true}
     categoryListImageEqualizeStrategy: { type: dropdown, title: 'Category List - Image Height Equalization Strategy', default: stretch, options: { stretch: 'Stretch', top: 'Align Top', middle: 'Align Middle', bottom: 'Align Bottom' } }
     productListImageEqualizeStrategy: { type: dropdown, title: 'Product List - Image Height Equalization Strategy', default: stretch, options: { stretch: 'Stretch', top: 'Align Top', middle: 'Align Middle', bottom: 'Align Bottom' } }

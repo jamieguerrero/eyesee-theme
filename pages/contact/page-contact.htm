@@ -5,10 +5,10 @@ template: default
 published: true
 protocol: all
 ---
-<section class="contact grid-container">
+<section class="contact">
 
-  <header class="cell contact-header">
-    <h1>Contact Us</h1>
+  <header class="contact-header margin-bottom-medium">
+    <h4>Contact Us</h4>
   </header>
 
   {{ open_form({
@@ -20,32 +20,32 @@ protocol: all
   }}
 
 
-    <div class="cell contact-flash">
+    <div class="contact-flash">
       {{ flash() }}
     </div>
 
-    <label class="cell">
+    <label class="cell contact-fields">
       Email*
       <input type="email" name="fields[email]" required pattern="email">
       <span class="error"></span>
       <span class="form-error">Email is required.</span>
     </label>
 
-    <label class="cell">
+    <label class="cell contact-fields">
       Name*
       <input type="text" name="fields[name]" required>
       <span class="error"></span>
       <span class="form-error">Name is required.</span>
     </label>
 
-    <label class="cell">
+    <label class="cell contact-fields">
       Message*
       <textarea name="fields[message]" required rows="10"></textarea>
       <span class="error"></span>
       <span class="form-error">Message is required.</span>
     </label>
 
-    <div class="cell">
+    <div class="cell contact-fields">
       <input type="text" name="hp" value="" style="display: none;"/>
       <input type="submit" class="button" value="Submit"/>
     </div>
