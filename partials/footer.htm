@@ -40,6 +40,26 @@
         </ul>
       </div>
 
+      <div class="footer-wrapper">
+        <ul class="menu footer-social-links">
+          {% if theme.facebookLink %}
+          <li>
+            <a href="{{ theme.facebookLink }}" target="_blank"><span class="fa fa-2x fa-facebook-official"></span></a>
+          </li>
+          {% endif %}
+          {% if theme.twitterLink %}
+          <li>
+            <a href="{{ theme.twitterLink }}" target="_blank"><span class="fa fa-2x fa-twitter"></span></a>
+          </li>
+          {% endif %}
+          {% if theme.instagramLink %}
+          <li>
+            <a href="{{ theme.instagramLink }}" target="_blank"><span class="fa fa-2x fa-instagram"></span></a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
     </div>
 
     <div class="cell small-12 medium-12 large-auto footer-nav">
